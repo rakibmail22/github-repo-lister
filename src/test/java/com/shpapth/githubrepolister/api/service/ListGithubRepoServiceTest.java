@@ -95,7 +95,7 @@ public class ListGithubRepoServiceTest {
 		Assertions.assertEquals("463260491", firstResponse.id());
 		Assertions.assertEquals("intro_continual_learning", firstResponse.name());
 		Assertions.assertEquals(343, firstResponse.starCount());
-		Assertions.assertEquals("https://github.com/clam004", firstResponse.url());
+		Assertions.assertEquals("https://github.com/clam004/intro_continual_learning", firstResponse.url());
 		Assertions.assertEquals("Jupyter Notebook", firstResponse.language());
 
 	}
