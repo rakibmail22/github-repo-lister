@@ -9,6 +9,7 @@ import com.shpapth.githubrepolister.api.validator.ListRepositoryValidator;
 import com.shpapth.githubrepolister.githubclient.GithubSearchFeignClient;
 import com.shpapth.githubrepolister.githubclient.model.GithubRepoSearchQuery;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
