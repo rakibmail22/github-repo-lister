@@ -20,7 +20,6 @@ to ingest data from github repository search api
 4. Run docker image `./runProd.sh`
 5. Now we can run the above mentioned curl request
 
-
 ##### Future Improvement for Better Scaling
 1. As github has ip based api throttling (maximum 10 request per minute for unauthenticated client and 30 for authenticated)
 we can cache the response from `ListGithubRepoServiceImpl#getRepositories` against the query params for 2 minutes
@@ -28,6 +27,11 @@ that will prevent our service to create request to github for same request param
 This can be implemented with Redis (Or any other distributed cache like Hazelcast) configured with `@Cahceable` Spring
 or using any of the cache specific clients.
 2. Add more test coverage especially for the api endpoint and validator class
+3. Add Api documentation tool like Swagger with Open Api
+
+#### Alternative Clients
+1. We can use `RestTEmplate` directly to call. Feign client is just a wrapper above springs Rest Template
+2. We can also use `WebClient` which is now a days promoted by Spring, it's basically introduced for the reactive webflux api but works with servlet based implementations too
 
 
 
